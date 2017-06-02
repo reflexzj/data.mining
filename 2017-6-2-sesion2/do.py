@@ -68,4 +68,5 @@ if __name__ == '__main__':
     file = 'data/result.txt'
     texts= to_texts(file)
     dictionary = tokens(texts)
-    vectors = to_vectors(dictionary, texts)
+    corpus = to_vectors(dictionary, texts)
+    corpus_formate(corpus)
