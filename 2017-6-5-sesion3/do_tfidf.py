@@ -8,9 +8,15 @@ def to_Tfidmodle(corpus):
     tfidf.save('../2017-6-5-sesion3/data/corpus.tfidf_model')
 
     #输出所有的结果
-    fopen = open('data/tfidf.csv', 'w')
-    for doc in tfidf[corpus]:
-        fopen.write(str(doc)+'\n')
+    #[]内最小单位是一个文档， 可以显示部分的结果
+    # fopen = open('data/tfidf.csv', 'w')
+    # for doc in tfidf[corpus]:
+    #     fopen.write(str(doc)+'\n')
+
+    # 基于上述代码生成模型后，idf已经存为模型的参数了
+    # tf 则是根据新给的some_doc来确定
+    # some_doc = [(1590,1), (1,1)]
+    # print tfidf[some_doc]
 
 
 if __name__ == '__main__':
@@ -19,8 +25,8 @@ if __name__ == '__main__':
     to_Tfidmodle(corpus)
 
     #查看处理好的语料
-    fopen = open('data/corpus.csv', 'w')
-    for each in corpus:
-        fopen.write(str(each)+'\n')
-
-    to_Tfidmodle(corpus)
+    # fopen = open('data/corpus.csv', 'w')
+    # for each in corpus:
+    #     fopen.write(str(each)+'\n')
+    #
+    # to_Tfidmodle(corpus)
