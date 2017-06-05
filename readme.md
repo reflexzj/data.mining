@@ -13,3 +13,9 @@
 > 主要使用gensim这个库
 - 英文官方网站：http://radimrehurek.com/gensim/tut1.html
 - 中文参照：http://blog.csdn.net/questionfish/article/details/46739207
+
+## Sesion 3
+> 探究TF_IDA的使用
+- 基于gensim.models中 TF_IDA的调用
+
+> 探究LDA模型
