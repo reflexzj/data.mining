@@ -16,7 +16,7 @@ def tokens(texts):
 
     #停用词
     # stop_ids = [dictionary.token2id[stopword] for stopword in stoplist
-    #             if stopword in dictionary.token2id]、
+    #             if stopword in dictionary.token2id]
 
     # 出现一次的低频词
     once_ids = [tokenid for tokenid, docfreq in dictionary.dfs.iteritems()
@@ -34,19 +34,13 @@ def tokens(texts):
 #产生稀疏文档向量
 def to_vectors(dictionary, texts):
     corpus = [dictionary.doc2bow(text) for text in texts]
+
     #存入硬盘备用
     corpora.MmCorpus.serialize('temp/vectors.mm', corpus)
 
     # for data in corpus:
     #     print data
 
-    #将处理好一个稀疏矩阵存入一个text文件中，有没有这个必要？
-    # fopen = open('result/corpus.txt','w')
-    # for data in corpus:
-    #     for word in data:
-    #         fopen.write(word)
-    #         fopen.write(',')
-    #     fopen.write('\n')
 
     return corpus
 
