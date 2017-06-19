@@ -19,3 +19,8 @@
 - 基于gensim.models中 TF_IDA的调用
 
 > 探究LDA模型
+
+## Sesion 4
+> 了解svm分类算法
+> 应用一下svm模型
+- sklearn上的函数调用说明：http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
