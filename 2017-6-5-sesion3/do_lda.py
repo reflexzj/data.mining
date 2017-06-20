@@ -2,7 +2,7 @@ from gensim import corpora, models
 
 def to_ldaModel(corpus):
 
-    lda = models.LdaModel(corpus, num_topics= 9)
+    lda = models.LdaModel(corpus, num_topics= 20)
 
     fopen = open('data/lda_file.csv', 'w')
     for each in lda[corpus]:

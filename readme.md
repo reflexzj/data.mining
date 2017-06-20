@@ -19,6 +19,8 @@
 - 基于gensim.models中 TF_IDA的调用
 
 > 探究LDA模型
+- gensim中的LDA主题模型可以傻瓜式调用（主题的权重值可以是0）
+
 
 ## Sesion 4
 > 了解svm分类算法
