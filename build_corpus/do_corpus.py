@@ -8,13 +8,12 @@ def to_texts(file):
              for data in datas]
     return texts
 
-# 统计维度，并生成对应的字典
-# 搜集停用词，仅出现一次词的id
+# 统计维度，并生成对应的字典（去除停用词以及仅出现一次词的id）
 def tokens(texts):
     dictionary = corpora.Dictionary(texts)
     dictionary.save('temp/tokens.dict')
 
-    #停用词
+    # 停用词
     # stop_ids = [dictionary.token2id[stopword] for stopword in stoplist
     #             if stopword in dictionary.token2id]
 
@@ -22,7 +21,7 @@ def tokens(texts):
     once_ids = [tokenid for tokenid, docfreq in dictionary.dfs.iteritems()
                 if docfreq == 1]
 
-    #删除停用词和低频词，并去除不连续的缺口
+    # 删除停用词和低频词，并去除不连续的缺口
     dictionary.filter_tokens(once_ids)
     dictionary.compactify()
 
@@ -31,11 +30,11 @@ def tokens(texts):
 
     return dictionary
 
-#产生稀疏文档向量
+# 产生稀疏文档向量
 def to_vectors(dictionary, texts):
     corpus = [dictionary.doc2bow(text) for text in texts]
 
-    #存入硬盘备用
+    # 存入硬盘备用
     corpora.MmCorpus.serialize('temp/vectors.mm', corpus)
 
     # for data in corpus:

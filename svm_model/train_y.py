@@ -1,7 +1,7 @@
 # coding=utf-8
 import pandas as pd
 
-#读取文本的分布（包括文档数和标签值）
+# 读取文本的分布（包括文档数和标签值）
 def fileDis(fileroot):
     file_dis = open('data/file_distribution.txt', 'r')
 
@@ -15,7 +15,7 @@ def fileDis(fileroot):
     return file_distribution
 
 def give_train_Y(file_dis):
-    train_y = open('data/train_y.csv', 'w')
+    train_y = open('../data/train_y.csv', 'w')
     for dis in file_dis:
         for i in range(0, dis[1]):
             train_y.write(str(dis[0])+ '\n')
