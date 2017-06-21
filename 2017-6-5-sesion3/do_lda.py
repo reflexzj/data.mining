@@ -7,6 +7,7 @@ def to_ldaModel(corpus, topic_num):
     lda = models.LdaModel(corpus, num_topics= topic_num)
 
     #打印到csv文件中去，看一下
+    #发现主题模型每次训练完之后，得到的主题分布结果是不一致的
     lda_file = open('data/lda_file.csv', 'w')
     train_x = open('data/train_x.csv', 'w')
     for each in lda[corpus]:
