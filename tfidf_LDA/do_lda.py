@@ -27,8 +27,6 @@ def to_ldaModel(corpus, topic_num):
 
         train_x.write(str(x_each)[1:-1]+'\n')
 
-        # 生成对应的train_y,根据原始的九个文件夹名打标记
-
         end =time.time()
 
     print '---------- build lda model and save as "train_x.csv":', end-start
