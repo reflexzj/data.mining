@@ -1,8 +1,8 @@
 # 工作流程图安排
 ## 目标
-> - 了解学习目标
+- 了解学习目标
         利用LDA主题模型结合SVM分类算法，实现文本小实验
->  - 安装python64位
+- 安装python64位
         安装相关Python包，实现jieba分词
 
 ##  data precessing and built corpus
