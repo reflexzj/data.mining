@@ -28,7 +28,7 @@ def to_ldaModel(corpus, topic_num):
 
         end =time.time()
 
-    print '---------- build lda model and save as "train_x.csv":', end-start
+    print '---------- build lda model '+ '-- topic_num= ', topic_num, ' -- time cost:', end-start
 
 
 if __name__ == '__main__':
