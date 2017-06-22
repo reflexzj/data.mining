@@ -35,4 +35,4 @@ if __name__ == '__main__':
 
     corpus_url = '../build_corpus/temp/vectors.mm'
     corpus = corpora.MmCorpus(corpus_url)
-    to_ldaModel(corpus , topic_num= 25)
+    to_ldaModel(corpus , topic_num= 50)
