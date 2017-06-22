@@ -16,7 +16,7 @@ def lda_svm():
     # 给出LDA主题模型，自己定义LDA的主题数目
     corpus_url = 'build_corpus/temp/vectors.mm'
 
-    topic_num = 25
+    topic_num = 40
 
     corpus = corpora.MmCorpus(corpus_url)
     do_lda.to_ldaModel(corpus, topic_num)
