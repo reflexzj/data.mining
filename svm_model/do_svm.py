@@ -31,8 +31,8 @@ def do_svm(x_file, y_file, rate, cv):
 
     end = time.time()
 
-    print '---------- svm model leaning and show the result, time cost:', start-end, '\n', \
-        "Accuracy: %0.2f (+/- %0.2f)" % (result.mean(), result.std() * 2)
+    print '---------- svm model leaning ---------- \ntime cost: %0.2f' % (end-start),  \
+        "\nAccuracy: %0.2f (+/- %0.2f)" % (result.mean(), result.std() * 2), '\n'
 
 
 

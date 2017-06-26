@@ -28,7 +28,8 @@ def to_ldaModel(corpus, topic_num):
 
         end =time.time()
 
-    print '---------- build lda model '+ '-- topic_num= ', topic_num, ' -- time cost:', end-start
+    print '---------- build lda model ---------- ', '\ntopic_num: ', topic_num, \
+            '\ntime cost: %0.2f' % (end-start)
 
 
 if __name__ == '__main__':
