@@ -1,4 +1,7 @@
 # coding=utf-8
+__author__ = 'zhang jian'
+__date__ = '2017-6-20'
+
 from tfidf_LDA import do_lda
 from svm_model import do_svm
 from gensim import corpora
